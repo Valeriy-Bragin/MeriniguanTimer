@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/greenBackgroundImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/green_background" />
+
+    <ImageView
+        android:id="@+id/bellImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        app:srcCompat="@drawable/bell" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="400dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="5dp" />
+
+    <ImageView
+        android:id="@+id/plusImageView"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:onClick="plusOneSecondToTime"
+        android:layout_below="@id/seekBar"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="6dp"
+        android:background="@drawable/square"
+        app:srcCompat="@drawable/ic_baseline_add_white_24"/>
+
+    <ImageView
+        android:id="@+id/minusImageView"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:onClick="minusOneSecondFromTime"
+        android:layout_below="@id/seekBar"
+        android:layout_toStartOf="@+id/plusImageView"
+        android:layout_marginEnd="6dp"
+        android:background="@drawable/square"
+        app:srcCompat="@drawable/ic_baseline_remove_white_24"/>
+
+    <TextView
+        android:id="@+id/timeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="01:00"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="50sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="186dp" />
+
+    <ImageView
+        android:id="@+id/startStopImageView"
+        android:layout_width="74dp"
+        android:layout_height="74dp"
+        android:onClick="startOrStopTimer"
+        android:background="@drawable/green_circle"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/timeTextView"
+        android:layout_marginTop="22dp"
+        app:srcCompat="@drawable/ic_baseline_play_arrow_24" />
+
+    <ImageView
+        android:id="@+id/refreshImageView"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:onClick="refreshTimer"
+        android:background="@drawable/green_circle"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/startStopImageView"
+        android:layout_marginTop="20dp"
+        app:srcCompat="@drawable/ic_baseline_refresh_24" />
+
+
+</RelativeLayout>

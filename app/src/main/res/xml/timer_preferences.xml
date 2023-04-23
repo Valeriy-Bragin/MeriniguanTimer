@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <CheckBoxPreference
+        android:title="Enable Sound"
+        android:key="enable_sound"
+        android:defaultValue="true"
+        android:summaryOn="Sound Enabled"
+        android:summaryOff="Sound Disabled" />
+
+    <ListPreference
+        android:title="Melody"
+        android:key="melody"
+        android:defaultValue="Bell"
+        android:entries="@array/pref_melody_labels"
+        android:entryValues="@array/pref_melody_values" />
+
+    <EditTextPreference
+        android:title="Default Interval"
+        android:key="default_interval"
+        android:defaultValue="60" />
+
+    <EditTextPreference
+        android:title="Maximal Interval"
+        android:key="maximal_interval"
+        android:defaultValue="600" />
+
+    <CheckBoxPreference
+        android:title="Enable Hours"
+        android:key="enable_hours"
+        android:defaultValue="false"
+        android:summaryOn="Hours enabled"
+        android:summaryOff="Hours disabled"/>
+
+    <CheckBoxPreference
+        android:title="Enable Half Time Notification"
+        android:key="enable_half_time_notification"
+        android:defaultValue="false"
+        android:summaryOn="Half Time Notification Enabled"
+        android:summaryOff="Half Time Notification Disabled"/>
+
+</PreferenceScreen>
